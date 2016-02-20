@@ -44,15 +44,19 @@ class App extends React.Component<AppProps, void> {
         <button onClick={actions.startClicked} className="btn btn-default">Start</button>
       </div>
     }
-    else {
+    else if (mainState.status == TestStatus.started) {
       return <div>
         <Header />
         <p className={"lead"}>{Constants.textTitle}</p>
-        {Constants.text.map((s) => <p>{s}</p>)}
-        { mainState.status == TestStatus.started ? <button onClick={actions.doneClicked} className="btn btn-default">Done</button> : null }
-        { mainState.status == TestStatus.finished ? <hr/> : null }
-        { mainState.status == TestStatus.finished ? <StatsSection secondsTaken={mainState.secondsTaken}/> : null }
-        { mainState.status == TestStatus.finished ? <button onClick={actions.resetClicked} className="btn btn-default">Reset</button> : null }
+        {Constants.text.map((s, i) => <p key={i}>{s}</p>)}
+        <button onClick={actions.doneClicked} className="btn btn-default">Done</button>
+      </div>
+    }
+    else {
+      return <div>
+        <Header />
+        <StatsSection secondsTaken={mainState.secondsTaken}/>
+        <button onClick={actions.resetClicked} className="btn btn-default">Reset</button>
       </div>
     }
   }
