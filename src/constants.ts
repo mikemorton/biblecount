@@ -1,5 +1,5 @@
 
-export const textTitle:string = "John 3 (New International Version)";
+export const textTitle:string = "John 3:1-21 (New International Version)";
 
 export const text:string[] = ['Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, “Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him.”',
   'Jesus replied, “Very truly I tell you, no one can see the kingdom of God unless they are born again.”',
@@ -10,6 +10,6 @@ export const text:string[] = ['Now there was a Pharisee, a man named Nicodemus w
   'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son. This is the verdict: Light has come into the world, but people loved darkness instead of light because their deeds were evil. Everyone who does evil hates the light, and will not come into the light for fear that their deeds will be exposed. But whoever lives by the truth comes into the light, so that it may be seen plainly that what they have done has been done in the sight of God.'
 ]
 
+export const textCount:number = text.join(' ').split(' ').length;
 
-export const textCount:number = text.join().split(' ').length;
 export const totalBibleCount = 741065;
